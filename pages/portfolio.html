@@ -5,7 +5,34 @@
 <title>Portfolio — Teivora Technology Solutions</title>
 <link rel="icon" href="../images/logo.png">
 <link rel="stylesheet" href="../css/style.css">
-
+<style>
+/* Project card image background overrides */
+.port-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  transition: transform 0.5s ease;
+}
+.port-card:hover .port-bg {
+  transform: scale(1.07);
+}
+.port-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5,10,30,0.92) 0%, rgba(5,10,30,0.55) 50%, rgba(5,10,30,0.25) 100%);
+  z-index: 1;
+}
+.port-card {
+  overflow: hidden;
+  position: relative;
+}
+.port-info {
+  position: relative;
+  z-index: 2;
+}
+</style>
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -42,7 +69,7 @@
   <a href="services.html">Services</a>
   <a href="about.html">About</a>
   <a href="portfolio.html">Portfolio</a>
-  
+  <a href="blog.html">Blog</a>
   <a href="pricing.html">Pricing</a>
   <a href="team.html">Team</a>
   <a href="contact.html">Contact</a>
@@ -62,16 +89,18 @@
 
 <section class="section">
   <div class="wrap">
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;" class="filter-row rv">
+  <!--  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px;" class="filter-row rv">
       <button class="ftag on" data-cat="all">All Projects</button>
       <button class="ftag" data-cat="ai">AI / ML</button>
       <button class="ftag" data-cat="cloud">Cloud</button>
       <button class="ftag" data-cat="security">Security</button>
       <button class="ftag" data-cat="mobile">Mobile</button>
       <button class="ftag" data-cat="analytics">Analytics</button>
-    </div>
+      <button class="ftag" data-cat="electronics">Electronics</button>
+      <button class="ftag" data-cat="live">Live Projects</button>
+    </div> -->
     <div class="port-grid">
-      <div class="port-card rv" data-cat="ai"><div class="port-bg" style="background:linear-gradient(135deg,#0f1728,#3557ff)"></div><div class="port-icon">🤖</div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">AI / ML</span><h3>Predictive Analytics Platform — 60% forecast improvement</h3></div></div>
+     <!-- <div class="port-card rv" data-cat="ai"><div class="port-bg" style="background:linear-gradient(135deg,#0f1728,#3557ff)"></div><div class="port-icon">🤖</div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">AI / ML</span><h3>Predictive Analytics Platform — 60% forecast improvement</h3></div></div>
       <div class="port-card rv" data-cat="cloud" style="transition-delay:.08s"><div class="port-bg" style="background:linear-gradient(135deg,#0f2040,#00c6be)"></div><div class="port-icon">☁️</div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Cloud</span><h3>Multi-Cloud Migration — 40% cost reduction, zero downtime</h3></div></div>
       <div class="port-card rv" data-cat="security" style="transition-delay:.16s"><div class="port-bg" style="background:linear-gradient(135deg,#0f1f18,#22c55e)"></div><div class="port-icon">🛡️</div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Security</span><h3>Zero-Trust Architecture — SOC 2 Type II certified</h3></div></div>
       <div class="port-card rv" data-cat="mobile" style="transition-delay:.24s"><div class="port-bg" style="background:linear-gradient(135deg,#1a0f3c,#7c5cfc)"></div><div class="port-icon">📱</div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Mobile</span><h3>FinTech Super App — 2M+ users in 6 months</h3></div></div>
@@ -80,6 +109,208 @@
       <div class="port-card rv" data-cat="cloud" style="transition-delay:.48s"><div class="port-bg" style="background:linear-gradient(135deg,#0f1f0f,#22c55e)"></div><div class="port-icon">⚙️</div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Cloud</span><h3>Kubernetes Platform — 99.99% uptime, 5× scale</h3></div></div>
       <div class="port-card rv" data-cat="mobile" style="transition-delay:.56s"><div class="port-bg" style="background:linear-gradient(135deg,#1a0f00,#f59e0b)"></div><div class="port-icon">🏥</div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Mobile</span><h3>HealthTech Platform — 500K patients served monthly</h3></div></div>
       <div class="port-card rv" data-cat="analytics" style="transition-delay:.64s"><div class="port-bg" style="background:linear-gradient(135deg,#0f0f2a,#7c5cfc)"></div><div class="port-icon">🔬</div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Analytics</span><h3>Supply Chain Intelligence — $12M annual savings</h3></div></div>
+-->
+      <!-- Live Projects -->
+      <a href="https://wankhede-crm.netlify.app/" target="_blank" rel="noopener" class="port-card rv" data-cat="live" style="transition-delay:.72s;text-decoration:none"><div class="port-bg" style="background:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80') center/cover no-repeat;"></div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Live · CRM</span><h3>Builder Sector CRM — Wankhede Real Estate Solution <span style="font-size:.75em;opacity:.7">↗ Live</span></h3></div></a>
+
+      <a href="https://teivora-crm.netlify.app/" target="_blank" rel="noopener" class="port-card rv" data-cat="live" style="transition-delay:.80s;text-decoration:none"><div class="port-bg" style="background:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80') center/cover no-repeat;"></div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Live · CRM</span><h3>Teivora CRM — Universal Customer Management Platform <span style="font-size:.75em;opacity:.7">↗ Live</span></h3></div></a>
+
+      <a href="https://teivora-community.netlify.app/" target="_blank" rel="noopener" class="port-card rv" data-cat="live" style="transition-delay:.88s;text-decoration:none"><div class="port-bg" style="background:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80') center/cover no-repeat;"></div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Live · Community</span><h3>Teivora Community — Developer & Client Collaboration Hub <span style="font-size:.75em;opacity:.7">↗ Live</span></h3></div></a>
+
+      <!-- Placeholder cards (links to be added later) -->
+      <!-- <div class="port-card rv" data-cat="ai" style="transition-delay:.96s"><div class="port-bg" style="background:url('https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80') center/cover no-repeat;"></div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">AI / ML</span><h3>Coming Soon — AI-Powered Project</h3></div></div>-->
+
+      <a href="https://abchealthcare.netlify.app/" target="_blank" rel="noopener" class="port-card rv" data-cat="live" style="transition-delay:1.04s;text-decoration:none"><div class="port-bg" style="background:url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80') center/cover no-repeat;"></div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Live · Healthcare</span><h3>Hospital Management System — ABC Healthcare Solution <span style="font-size:.75em;opacity:.7">↗ Live</span></h3></div></a>
+
+      <a href="https://tarontechnology.com/" target="_blank" rel="noopener" class="port-card rv" data-cat="live" style="transition-delay:1.12s;text-decoration:none"><div class="port-bg" style="background:url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80') center/cover no-repeat;"></div><div class="port-overlay"></div><div class="port-info"><span class="port-tag">Live · Website</span><h3>Taron Technology — Official Company Website <span style="font-size:.75em;opacity:.7">↗ Live</span></h3></div></a>
+
+      <!-- VAWT Electronics Card -->
+      <div class="port-card rv vawt-card" data-cat="electronics" onclick="document.getElementById('vawt-modal').classList.add('open')" style="transition-delay:1.20s;position:relative;overflow:hidden;min-height:260px;cursor:pointer;">
+        <div class="port-bg" style="background:linear-gradient(135deg,#0a1628,#0f3460,#16213e)"></div>
+        <div class="port-overlay"></div>
+
+        <!-- Animated SVG Scene -->
+        <div class="vawt-scene" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1;pointer-events:none;">
+          <svg viewBox="0 0 320 220" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;">
+            <defs>
+              <radialGradient id="skyGlow" cx="50%" cy="40%" r="60%">
+                <stop offset="0%" stop-color="#1a4a8a" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#0a1628" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="groundGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1e3a5f"/>
+                <stop offset="100%" stop-color="#0a1628"/>
+              </linearGradient>
+              <linearGradient id="panelGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1d4ed8"/>
+                <stop offset="100%" stop-color="#0ea5e9"/>
+              </linearGradient>
+              <linearGradient id="sunGlow" cx="50%" cy="50%" r="50%" id="sunGrad" gradientUnits="objectBoundingBox">
+                <stop offset="0%" stop-color="#fbbf24"/>
+                <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="softGlow">
+                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+
+            <!-- Sky glow -->
+            <ellipse cx="160" cy="80" rx="140" ry="90" fill="url(#skyGlow)"/>
+
+            <!-- Stars -->
+            <circle cx="30" cy="20" r="1" fill="white" opacity="0.6"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.1s" repeatCount="indefinite"/></circle>
+            <circle cx="80" cy="12" r="1" fill="white" opacity="0.5"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.7s" repeatCount="indefinite"/></circle>
+            <circle cx="240" cy="15" r="1" fill="white" opacity="0.7"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.5s" repeatCount="indefinite"/></circle>
+            <circle cx="290" cy="25" r="1" fill="white" opacity="0.4"><animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.9s" repeatCount="indefinite"/></circle>
+            <circle cx="55" cy="40" r="0.8" fill="white" opacity="0.5"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="3s" repeatCount="indefinite"/></circle>
+            <circle cx="300" cy="50" r="0.8" fill="white" opacity="0.4"><animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.3s" repeatCount="indefinite"/></circle>
+
+            <!-- Sun/Moon glow -->
+            <circle cx="260" cy="35" r="18" fill="#fbbf24" opacity="0.12" filter="url(#softGlow)"/>
+            <circle cx="260" cy="35" r="10" fill="#fde68a" opacity="0.25" filter="url(#glow)"/>
+            <circle cx="260" cy="35" r="5" fill="#fef3c7" opacity="0.5"/>
+
+            <!-- Ground -->
+            <rect x="0" y="185" width="320" height="35" fill="url(#groundGrad)" rx="0"/>
+            <ellipse cx="160" cy="185" rx="160" ry="6" fill="#1e3a5f" opacity="0.7"/>
+
+            <!-- Clouds -->
+            <g opacity="0.25">
+              <ellipse cx="60" cy="55" rx="28" ry="10" fill="#7dd3fc"/>
+              <ellipse cx="45" cy="58" rx="18" ry="8" fill="#bae6fd"/>
+              <ellipse cx="75" cy="58" rx="20" ry="8" fill="#bae6fd"/>
+              <animateTransform attributeName="transform" type="translate" values="0,0;8,0;0,0" dur="8s" repeatCount="indefinite"/>
+            </g>
+            <g opacity="0.18">
+              <ellipse cx="230" cy="45" rx="22" ry="8" fill="#7dd3fc"/>
+              <ellipse cx="218" cy="48" rx="14" ry="7" fill="#bae6fd"/>
+              <ellipse cx="242" cy="48" rx="16" ry="7" fill="#bae6fd"/>
+              <animateTransform attributeName="transform" type="translate" values="0,0;-6,0;0,0" dur="11s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- ===== SOLAR PANELS (left side) ===== -->
+            <g transform="translate(28, 148)">
+              <!-- Panel stand -->
+              <rect x="18" y="28" width="3" height="18" fill="#94a3b8" rx="1"/>
+              <rect x="10" y="44" width="19" height="3" fill="#64748b" rx="1"/>
+              <!-- Panel body -->
+              <rect x="0" y="15" width="39" height="26" fill="url(#panelGrad)" rx="2" opacity="0.9"/>
+              <!-- Panel grid lines -->
+              <line x1="13" y1="15" x2="13" y2="41" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+              <line x1="26" y1="15" x2="26" y2="41" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+              <line x1="0" y1="24" x2="39" y2="24" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+              <line x1="0" y1="32" x2="39" y2="32" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+              <!-- Panel shine -->
+              <rect x="0" y="15" width="39" height="26" fill="white" rx="2" opacity="0">
+                <animate attributeName="opacity" values="0;0.12;0" dur="3s" repeatCount="indefinite"/>
+              </rect>
+              <!-- Solar glow when "charging" -->
+              <ellipse cx="19" cy="28" rx="22" ry="15" fill="#fbbf24" opacity="0">
+                <animate attributeName="opacity" values="0;0.07;0" dur="3s" repeatCount="indefinite"/>
+              </ellipse>
+            </g>
+
+            <!-- ===== SECOND SOLAR PANEL ===== -->
+            <g transform="translate(72, 155)">
+              <rect x="18" y="22" width="3" height="12" fill="#94a3b8" rx="1"/>
+              <rect x="10" y="32" width="19" height="3" fill="#64748b" rx="1"/>
+              <rect x="0" y="10" width="35" height="22" fill="url(#panelGrad)" rx="2" opacity="0.85"/>
+              <line x1="11" y1="10" x2="11" y2="32" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+              <line x1="23" y1="10" x2="23" y2="32" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+              <line x1="0" y1="18" x2="35" y2="18" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+              <line x1="0" y1="25" x2="35" y2="25" stroke="#93c5fd" stroke-width="0.5" opacity="0.5"/>
+              <rect x="0" y="10" width="35" height="22" fill="white" rx="2" opacity="0">
+                <animate attributeName="opacity" values="0;0.1;0" dur="4s" begin="1s" repeatCount="indefinite"/>
+              </rect>
+            </g>
+
+            <!-- Energy flow lines solar → battery -->
+            <g opacity="0.5" filter="url(#glow)">
+              <line x1="47" y1="180" x2="155" y2="192" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4">
+                <animate attributeName="stroke-dashoffset" values="0;-16" dur="1s" repeatCount="indefinite"/>
+              </line>
+              <line x1="89" y1="182" x2="155" y2="192" stroke="#fbbf24" stroke-width="1" stroke-dasharray="4,4">
+                <animate attributeName="stroke-dashoffset" values="0;-16" dur="1s" begin="0.3s" repeatCount="indefinite"/>
+              </line>
+            </g>
+
+            <!-- ===== VAWT TURBINE (center) ===== -->
+            <!-- Tower -->
+            <rect x="157" y="110" width="6" height="80" fill="#64748b" rx="2"/>
+            <rect x="150" y="185" width="20" height="5" fill="#475569" rx="2"/>
+
+            <!-- VAWT Rotor blades — spinning around center axis -->
+            <g transform="translate(160, 120)" filter="url(#glow)">
+              <!-- 3 helical blades of VAWT, offset 120° each -->
+              <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="3s" repeatCount="indefinite" additive="sum"/>
+              <!-- Blade 1 -->
+              <path d="M0,-55 C18,-40 18,40 0,55 C-4,40 -4,-40 0,-55" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+              <!-- Blade 2 (120°) -->
+              <g transform="rotate(120)">
+                <path d="M0,-55 C18,-40 18,40 0,55 C-4,40 -4,-40 0,-55" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+              </g>
+              <!-- Blade 3 (240°) -->
+              <g transform="rotate(240)">
+                <path d="M0,-55 C18,-40 18,40 0,55 C-4,40 -4,-40 0,-55" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+              </g>
+              <!-- Center hub -->
+              <circle r="6" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+              <circle r="3" fill="#38bdf8"/>
+            </g>
+
+            <!-- Turbine glow ring -->
+            <circle cx="160" cy="120" r="60" fill="none" stroke="#38bdf8" stroke-width="0.5" opacity="0">
+              <animate attributeName="opacity" values="0;0.2;0" dur="3s" repeatCount="indefinite"/>
+              <animate attributeName="r" values="55;65;55" dur="3s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Energy flow turbine → battery -->
+            <line x1="160" y1="185" x2="160" y2="193" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.7">
+              <animate attributeName="stroke-dashoffset" values="0;-12" dur="0.8s" repeatCount="indefinite"/>
+            </line>
+
+            <!-- ===== BATTERY / INVERTER BOX ===== -->
+            <g transform="translate(135, 190)">
+              <rect x="0" y="0" width="50" height="22" rx="4" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1"/>
+              <rect x="4" y="4" width="12" height="14" rx="2" fill="#0ea5e9" opacity="0.7"/>
+              <rect x="19" y="4" width="12" height="14" rx="2" fill="#0ea5e9" opacity="0.5"/>
+              <rect x="34" y="4" width="12" height="14" rx="2" fill="#0ea5e9" opacity="0.3"/>
+              <!-- Battery level animate -->
+              <rect x="4" y="4" width="12" height="14" rx="2" fill="#22d3ee" opacity="0">
+                <animate attributeName="opacity" values="0;0.6;0" dur="2s" repeatCount="indefinite"/>
+              </rect>
+              <text x="25" y="30" text-anchor="middle" fill="#7dd3fc" font-size="5" font-family="monospace">BATTERY</text>
+            </g>
+
+            <!-- ===== SMALL WIND INDICATOR (right) ===== -->
+            <g transform="translate(258, 95)" opacity="0.5">
+              <animateTransform attributeName="transform" type="translate" values="258,95;265,95;258,95" dur="4s" repeatCount="indefinite"/>
+              <line x1="0" y1="0" x2="20" y2="0" stroke="#bae6fd" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="0" y1="6" x2="16" y2="6" stroke="#bae6fd" stroke-width="1" stroke-dasharray="3,3"/>
+              <line x1="0" y1="12" x2="12" y2="12" stroke="#bae6fd" stroke-width="1" stroke-dasharray="3,3"/>
+            </g>
+
+            <!-- "Coming Soon" pulse badge -->
+            <g transform="translate(220,165)">
+              <rect x="0" y="0" width="70" height="18" rx="9" fill="#0f3460" stroke="#38bdf8" stroke-width="1">
+                <animate attributeName="stroke-opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+              </rect>
+              <text x="35" y="12.5" text-anchor="middle" fill="#7dd3fc" font-size="7.5" font-family="monospace" font-weight="bold">⚡ COMING SOON</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="port-info" style="position:absolute;bottom:0;left:0;right:0;z-index:3;padding:18px 20px 20px;">
+          <span class="port-tag" style="background:rgba(14,165,233,.2);color:#38bdf8;border:1px solid rgba(56,189,248,.3);">Electronics · Green Energy</span>
+          <h3 style="color:#fff;margin-top:8px;font-size:1rem;line-height:1.4;">VAWT — Vertical Axis Wind Turbine & Solar Hybrid System <span style="font-size:.72em;opacity:.55">Coming Soon</span></h3>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -144,5 +375,105 @@
   <div class="ck-btns"><button class="ck-ok">Accept</button><button class="ck-no">Decline</button></div>
 </div>
 <script src="../js/main.js"></script>
+
+<!-- VAWT Document Modal -->
+<style>
+#vawt-modal{display:none;position:fixed;inset:0;z-index:9999;align-items:center;justify-content:center;padding:20px;}
+#vawt-modal.open{display:flex;}
+#vawt-modal .modal-backdrop{position:absolute;inset:0;background:rgba(5,10,25,.85);backdrop-filter:blur(8px);}
+#vawt-modal .modal-box{position:relative;z-index:2;background:linear-gradient(135deg,#0a1628,#0f2040);border:1px solid rgba(56,189,248,.25);border-radius:20px;max-width:720px;width:100%;max-height:88vh;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 0 60px rgba(56,189,248,.15),0 30px 80px rgba(0,0,0,.6);}
+#vawt-modal .modal-head{display:flex;align-items:center;gap:14px;padding:22px 26px 18px;border-bottom:1px solid rgba(56,189,248,.15);background:rgba(14,52,96,.4);}
+#vawt-modal .modal-head-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#0f3460,#0ea5e9);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 0 20px rgba(56,189,248,.3);}
+#vawt-modal .modal-head h2{color:#fff;font-size:1.05rem;font-weight:700;margin:0 0 4px;line-height:1.3;}
+#vawt-modal .modal-head p{color:#7dd3fc;font-size:.78rem;margin:0;}
+#vawt-modal .modal-close{margin-left:auto;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);color:#7dd3fc;width:34px;height:34px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
+#vawt-modal .modal-close:hover{background:rgba(56,189,248,.25);color:#fff;}
+#vawt-modal .modal-body{overflow-y:auto;padding:28px 26px;flex:1;}
+#vawt-modal .modal-body::-webkit-scrollbar{width:5px;}
+#vawt-modal .modal-body::-webkit-scrollbar-track{background:rgba(255,255,255,.03);}
+#vawt-modal .modal-body::-webkit-scrollbar-thumb{background:rgba(56,189,248,.3);border-radius:10px;}
+#vawt-modal .doc-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(14,165,233,.15);border:1px solid rgba(56,189,248,.3);color:#38bdf8;padding:5px 12px;border-radius:20px;font-size:.74rem;font-weight:600;margin-bottom:20px;letter-spacing:.04em;}
+#vawt-modal .doc-badge span{width:7px;height:7px;border-radius:50%;background:#38bdf8;animation:blink 1.4s infinite;}
+#vawt-modal .doc-title{color:#fff;font-size:1.25rem;font-weight:800;margin:0 0 6px;line-height:1.3;}
+#vawt-modal .doc-subtitle{color:#7dd3fc;font-size:.82rem;margin:0 0 24px;}
+#vawt-modal .doc-section{margin-bottom:22px;}
+#vawt-modal .doc-section-label{color:#38bdf8;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+#vawt-modal .doc-section-label::after{content:'';flex:1;height:1px;background:rgba(56,189,248,.2);}
+#vawt-modal .doc-text{color:rgba(255,255,255,.75);font-size:.88rem;line-height:1.75;margin:0;}
+#vawt-modal .doc-keywords{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;}
+#vawt-modal .doc-kw{background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.2);color:#7dd3fc;padding:4px 12px;border-radius:20px;font-size:.75rem;}
+#vawt-modal .doc-highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:6px;}
+#vawt-modal .doc-hl{background:rgba(14,52,96,.5);border:1px solid rgba(56,189,248,.15);border-radius:12px;padding:14px;text-align:center;}
+#vawt-modal .doc-hl .hl-icon{font-size:22px;margin-bottom:6px;}
+#vawt-modal .doc-hl .hl-val{color:#38bdf8;font-weight:700;font-size:.95rem;}
+#vawt-modal .doc-hl .hl-label{color:rgba(255,255,255,.45);font-size:.7rem;margin-top:2px;}
+#vawt-modal .modal-foot{padding:16px 26px;border-top:1px solid rgba(56,189,248,.12);display:flex;justify-content:flex-end;gap:10px;background:rgba(10,22,40,.5);}
+#vawt-modal .btn-outline{background:transparent;border:1px solid rgba(56,189,248,.3);color:#7dd3fc;padding:9px 20px;border-radius:10px;font-size:.84rem;cursor:pointer;transition:all .2s;}
+#vawt-modal .btn-outline:hover{background:rgba(56,189,248,.1);}
+#vawt-modal .btn-solid{background:linear-gradient(135deg,#0ea5e9,#3557ff);border:none;color:#fff;padding:9px 22px;border-radius:10px;font-size:.84rem;font-weight:600;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(14,165,233,.3);}
+#vawt-modal .btn-solid:hover{opacity:.88;transform:translateY(-1px);}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+@media(max-width:600px){#vawt-modal .modal-head h2{font-size:.92rem;}#vawt-modal .modal-body{padding:20px 16px;}#vawt-modal .doc-highlights{grid-template-columns:1fr 1fr;}}
+</style>
+
+<div id="vawt-modal">
+  <div class="modal-backdrop" onclick="document.getElementById('vawt-modal').classList.remove('open')"></div>
+  <div class="modal-box">
+    <div class="modal-head">
+      <div class="modal-head-icon">💨</div>
+      <div>
+        <h2>VAWT — Hybrid Solar &amp; Wind Energy System</h2>
+        <p>Electronics · Green Energy · Research Project</p>
+      </div>
+      <button class="modal-close" onclick="document.getElementById('vawt-modal').classList.remove('open')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="doc-badge"><span></span> Project Documentation</div>
+      <p class="doc-title">Vertical Axis Wind Turbines and Solar Power Generation Hybrid System</p>
+      <p class="doc-subtitle">Optimized hybrid renewable energy plant — minimizing cost, maximizing output</p>
+
+      <div class="doc-highlights">
+        <div class="doc-hl"><div class="hl-icon">🌀</div><div class="hl-val">VAWT</div><div class="hl-label">Wind Turbines</div></div>
+        <div class="doc-hl"><div class="hl-icon">☀️</div><div class="hl-val">PV Modules</div><div class="hl-label">Solar Photovoltaic</div></div>
+        <div class="doc-hl"><div class="hl-icon">🔋</div><div class="hl-val">Battery</div><div class="hl-label">Storage System</div></div>
+        <div class="doc-hl"><div class="hl-icon">⚡</div><div class="hl-val">Inverter</div><div class="hl-label">AC/DC Conversion</div></div>
+      </div>
+
+      <div class="doc-section" style="margin-top:24px;">
+        <div class="doc-section-label">Abstract</div>
+        <p class="doc-text">Although solar and wind energy are two of the most viable renewable energy sources, little research has been done on operating both energy sources alongside one another in order to take advantage of their complementary characters. In this project, we develop an optimal design for a hybrid solar-wind energy plant, where the variables that are optimized over include the number of photovoltaic modules, the wind turbine height, the number of wind turbines, and the turbine rotor diameter, and the goal is to minimize costs.</p>
+      </div>
+
+      <div class="doc-section">
+        <div class="doc-section-label">Overview</div>
+        <p class="doc-text">This project deals with the detailed design of a hybrid model combining solar and wind energy, using a battery as its storage system. The purpose is to generate electricity without using non-renewable resources, eliminating pollution. Since standalone renewable energy generation systems have inherent disadvantages, they need to be overcome by hybrid systems. Wind and solar energy are particularly popular owing to their abundant availability and convertibility to electrical energy.</p>
+      </div>
+
+      <div class="doc-section">
+        <div class="doc-section-label">System Design</div>
+        <p class="doc-text">This work covers the realization of a hybrid energy system for multiple applications, which runs under a designed circuitry to utilize both solar and wind power. A specialized circuitry is designed for more efficient results, along with inverters to convert the electrical energy as per demand — delivering clean power to any connected load.</p>
+      </div>
+
+      <div class="doc-section">
+        <div class="doc-section-label">Keywords</div>
+        <div class="doc-keywords">
+          <span class="doc-kw">Hybrid System</span>
+          <span class="doc-kw">Renewable Energy</span>
+          <span class="doc-kw">Photovoltaic</span>
+          <span class="doc-kw">Wind Turbine</span>
+          <span class="doc-kw">VAWT</span>
+          <span class="doc-kw">Battery Storage</span>
+          <span class="doc-kw">Inverter</span>
+          <span class="doc-kw">Energy Sources</span>
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn-outline" onclick="document.getElementById('vawt-modal').classList.remove('open')">Close</button>
+      <button class="btn-solid">🚀 Coming Soon</button>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
