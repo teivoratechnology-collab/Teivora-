@@ -112,30 +112,195 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="float-badge top-left" style="animation-delay:.5s">
-          <div class="fb-icon">🏆</div>
-          <div class="fb-text"><div class="fb-val">ISO 27001</div><div class="fb-lbl">Certified</div></div>
-        </div>
-       <div class="hero-card-main">
-  <div class="svc-grid">
+        <div class="iso-scene">
+<style>
+.iso-scene{position:relative;width:100%;max-width:480px;margin:0 auto;}
+.iso-scene svg{width:100%;height:auto;filter:drop-shadow(0 24px 48px rgba(53,87,255,.18));}
+@keyframes iso-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes iso-pulse{0%,100%{opacity:.7}50%{opacity:1}}
+@keyframes iso-beam{0%{stroke-dashoffset:60}100%{stroke-dashoffset:0}}
+@keyframes iso-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes iso-blink{0%,100%{opacity:1}50%{opacity:.3}}
+.iso-group{animation:iso-float 4s ease-in-out infinite;}
+.iso-group-delay{animation:iso-float 4s ease-in-out infinite;animation-delay:-1.5s;}
+.iso-beam-line{stroke-dasharray:6 4;animation:iso-beam 1.2s linear infinite;}
+.iso-pulse-dot{animation:iso-pulse 2s ease-in-out infinite;}
+.iso-blink{animation:iso-blink 1.8s ease-in-out infinite;}
+@media(prefers-reduced-motion:reduce){.iso-group,.iso-group-delay,.iso-beam-line,.iso-pulse-dot,.iso-blink{animation:none;}}
+</style>
+<svg viewBox="0 0 460 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Isometric illustration of a tech infrastructure: servers, cloud, AI brain, and connected devices">
 
-    <div class="svc-tile"><div class="image-card" style="background-image:url('https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400')"><span>AI / ML</span></div></div>
+<defs>
+  <!-- Server tower face gradients -->
+  <linearGradient id="srv-top" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4a6cf7"/><stop offset="100%" stop-color="#3557ff"/></linearGradient>
+  <linearGradient id="srv-left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1e3a8a"/><stop offset="100%" stop-color="#2547cc"/></linearGradient>
+  <linearGradient id="srv-right" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1a2f70"/><stop offset="100%" stop-color="#1e3a8a"/></linearGradient>
+  <!-- Cloud gradient -->
+  <linearGradient id="cloud-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7c5cfc"/><stop offset="100%" stop-color="#4a6cf7"/></linearGradient>
+  <!-- Platform base -->
+  <linearGradient id="plat-top" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1e2a5e"/><stop offset="100%" stop-color="#162050"/></linearGradient>
+  <linearGradient id="plat-left" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#101840"/><stop offset="100%" stop-color="#162050"/></linearGradient>
+  <linearGradient id="plat-right" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0d1435"/><stop offset="100%" stop-color="#101840"/></linearGradient>
+  <!-- Device screen -->
+  <linearGradient id="screen-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0d2060"/><stop offset="100%" stop-color="#1a3a90"/></linearGradient>
+  <!-- AI glow -->
+  <radialGradient id="ai-glow" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7c5cfc" stop-opacity="0.5"/><stop offset="100%" stop-color="#7c5cfc" stop-opacity="0"/></radialGradient>
+  <!-- Grid pattern for platform -->
+  <pattern id="grid" width="20" height="11.5" patternUnits="userSpaceOnUse" patternTransform="translate(230,260)">
+    <path d="M0 0 L10 5.75 L0 11.5" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+    <path d="M20 0 L10 5.75 L20 11.5" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+  </pattern>
+</defs>
 
-    <div class="svc-tile"><div class="image-card" style="background-image:url('https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400')"><span>Cloud</span></div></div>
+<!-- ─── PLATFORM BASE ─── -->
+<g class="iso-group">
+<!-- Top face -->
+<polygon points="230,258 380,170 380,200 230,288" fill="url(#plat-top)" opacity="0.95"/>
+<polygon points="80,170 230,258 230,288 80,200" fill="url(#plat-top)" opacity="0.9"/>
+<polygon points="80,170 230,82 380,170 230,258" fill="url(#plat-top)"/>
+<!-- Grid overlay on top -->
+<polygon points="80,170 230,82 380,170 230,258" fill="url(#grid)" opacity="1"/>
+<!-- Left face -->
+<polygon points="80,170 80,200 230,288 230,258" fill="url(#plat-left)"/>
+<!-- Right face -->
+<polygon points="380,170 380,200 230,288 230,258" fill="url(#plat-right)"/>
+<!-- Edge highlights -->
+<polyline points="80,170 230,82 380,170" fill="none" stroke="rgba(99,130,255,0.4)" stroke-width="0.8"/>
+<line x1="80" y1="170" x2="80" y2="200" stroke="rgba(99,130,255,0.25)" stroke-width="0.8"/>
+<line x1="380" y1="170" x2="380" y2="200" stroke="rgba(99,130,255,0.25)" stroke-width="0.8"/>
+<line x1="80" y1="200" x2="230" y2="288" stroke="rgba(99,130,255,0.2)" stroke-width="0.8"/>
+<line x1="380" y1="200" x2="230" y2="288" stroke="rgba(99,130,255,0.2)" stroke-width="0.8"/>
+</g>
 
-    <div class="svc-tile"><div class="image-card" style="background-image:url('https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400')"><span>Security</span></div></div>
+<!-- ─── SERVER TOWER (center-left) ─── -->
+<g class="iso-group" style="animation-delay:0s">
+<!-- Server block 1 (bottom) top face -->
+<polygon points="155,136 230,92 305,136 230,180" fill="url(#srv-top)"/>
+<!-- left face -->
+<polygon points="155,136 155,176 230,220 230,180" fill="url(#srv-left)"/>
+<!-- right face -->
+<polygon points="305,136 305,176 230,220 230,180" fill="url(#srv-right)"/>
+<!-- Edge highlights -->
+<polyline points="155,136 230,92 305,136" fill="none" stroke="rgba(120,160,255,0.5)" stroke-width="1"/>
+<!-- Drive slots top face -->
+<line x1="180" y1="118" x2="230" y2="90" stroke="rgba(120,160,255,0.3)" stroke-width="1"/>
+<line x1="205" y1="131" x2="255" y2="103" stroke="rgba(120,160,255,0.3)" stroke-width="1"/>
+<!-- LED dots on right face -->
+<circle cx="272" cy="150" r="2.5" fill="#00ff88" class="iso-blink"/>
+<circle cx="265" cy="161" r="2.5" fill="#4a6cf7" class="iso-pulse-dot"/>
+<circle cx="258" cy="172" r="2.5" fill="#ff6b35" class="iso-blink" style="animation-delay:.6s"/>
 
-    <div class="svc-tile"><div class="image-card" style="background-image:url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400')"><span>Software</span></div></div>
+<!-- Server block 2 (middle) -->
+<polygon points="155,96 230,52 305,96 230,140" fill="#3d60f0"/>
+<polygon points="155,96 155,136 230,180 230,140" fill="#1d3598"/>
+<polygon points="305,96 305,136 230,180 230,140" fill="#162d8a"/>
+<polyline points="155,96 230,52 305,96" fill="none" stroke="rgba(140,170,255,0.5)" stroke-width="1"/>
+<!-- LED row block 2 -->
+<circle cx="272" cy="110" r="2.5" fill="#00ff88" class="iso-pulse-dot" style="animation-delay:.3s"/>
+<circle cx="265" cy="121" r="2.5" fill="#4a6cf7"/>
+<line x1="178" y1="79" x2="225" y2="53" stroke="rgba(120,160,255,0.25)" stroke-width="0.8"/>
+<line x1="202" y1="91" x2="248" y2="65" stroke="rgba(120,160,255,0.25)" stroke-width="0.8"/>
 
-    <div class="svc-tile"><div class="image-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400')"><span>Analytics</span></div></div>
+<!-- Server block 3 (top) -->
+<polygon points="170,64 230,30 290,64 230,98" fill="#5070f8"/>
+<polygon points="170,64 170,96 230,130 230,98" fill="#2040b0"/>
+<polygon points="290,64 290,96 230,130 230,98" fill="#1a35a0"/>
+<polyline points="170,64 230,30 290,64" fill="none" stroke="rgba(160,190,255,0.55)" stroke-width="1"/>
+<circle cx="265" cy="80" r="3" fill="#7c5cfc" class="iso-pulse-dot" style="animation-delay:.9s"/>
+</g>
 
-    <div class="svc-tile"><div class="image-card" style="background-image:url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400')"><span>Mobile</span></div></div>
+<!-- ─── CLOUD BLOCK (top right) ─── -->
+<g class="iso-group-delay" style="animation-delay:-2s">
+<!-- Isometric cloud represented as rounded layered blocks -->
+<!-- Base block -->
+<polygon points="310,108 360,80 410,108 360,136" fill="#6040e0"/>
+<polygon points="310,108 310,130 360,158 360,136" fill="#3a1fa0"/>
+<polygon points="410,108 410,130 360,158 360,136" fill="#2e1890"/>
+<!-- Mid block -->
+<polygon points="320,88 360,65 400,88 360,111" fill="#7c5cfc"/>
+<polygon points="320,88 320,108 360,131 360,111" fill="#4a30c0"/>
+<polygon points="400,88 400,108 360,131 360,111" fill="#3d28b0"/>
+<!-- Top puff -->
+<polygon points="330,72 360,56 390,72 360,88" fill="#9878fd"/>
+<polygon points="330,72 330,88 360,104 360,88" fill="#5a40d0"/>
+<polygon points="390,72 390,88 360,104 360,88" fill="#4a35c0"/>
+<!-- Shine edge -->
+<polyline points="330,72 360,56 390,72" fill="none" stroke="rgba(220,200,255,0.5)" stroke-width="1"/>
+<!-- Upload arrow symbol (top face) -->
+<line x1="360" y1="80" x2="360" y2="68" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round"/>
+<polyline points="355,73 360,67 365,73" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<!-- Label -->
+<text x="388" y="72" fill="rgba(180,160,255,0.9)" font-size="10" font-family="sans-serif" font-weight="600" letter-spacing="0.5">CLOUD</text>
+</g>
 
-  </div>
-</div>
-        <div class="float-badge bot-right">
-          <div class="fb-icon">⭐</div>
-          <div class="fb-text"><div class="fb-val">4.9 / 5.0</div><div class="fb-lbl">Avg Client Rating</div></div>
+<!-- ─── AI BRAIN NODE (left) ─── -->
+<g class="iso-group" style="animation-delay:-.8s">
+<!-- Glow circle -->
+<ellipse cx="130" cy="148" rx="38" ry="22" fill="url(#ai-glow)"/>
+<!-- Isometric hexagonal AI node -->
+<polygon points="100,140 130,123 160,140 160,164 130,181 100,164" fill="#1a2070" stroke="#7c5cfc" stroke-width="1.5" stroke-linejoin="round"/>
+<!-- Inner hex -->
+<polygon points="110,143 130,132 150,143 150,161 130,172 110,161" fill="#2a30a0" stroke="rgba(124,92,252,0.4)" stroke-width="1"/>
+<!-- Neural lines (emanating) -->
+<line x1="100" y1="140" x2="80" y2="128" stroke="#7c5cfc" stroke-width="1" opacity="0.6"/>
+<line x1="100" y1="164" x2="78" y2="168" stroke="#7c5cfc" stroke-width="1" opacity="0.5"/>
+<line x1="130" y1="123" x2="130" y2="104" stroke="#7c5cfc" stroke-width="1" opacity="0.7"/>
+<line x1="160" y1="140" x2="178" y2="130" stroke="#7c5cfc" stroke-width="1" opacity="0.6"/>
+<!-- Center dot -->
+<circle cx="130" cy="152" r="5" fill="#7c5cfc" class="iso-pulse-dot"/>
+<circle cx="130" cy="152" r="9" fill="none" stroke="#7c5cfc" stroke-width="1" opacity="0.4" class="iso-pulse-dot" style="animation-delay:.4s"/>
+<!-- Label -->
+<text x="120" y="192" fill="rgba(160,140,255,0.9)" font-size="10" font-family="sans-serif" font-weight="600" letter-spacing="0.5">AI / ML</text>
+</g>
+
+<!-- ─── DEVICE / LAPTOP (bottom right) ─── -->
+<g class="iso-group-delay">
+<!-- Screen back -->
+<polygon points="290,240 340,212 390,240 340,268" fill="#1a2880"/>
+<!-- Screen front (face) -->
+<polygon points="290,240 290,266 340,294 340,268" fill="#0f1850"/>
+<polygon points="390,240 390,266 340,294 340,268" fill="#0a1240"/>
+<!-- Screen content (display) — isometric face of screen -->
+<polygon points="298,244 340,220 382,244 340,268" fill="url(#screen-g)"/>
+<!-- Chart bars on screen (isometric illusion) -->
+<polygon points="316,258 316,248 322,245 322,255" fill="#3557ff" opacity="0.9"/>
+<polygon points="327,252 327,240 333,237 333,249" fill="#4a6cf7" opacity="0.9"/>
+<polygon points="338,256 338,244 344,241 344,253" fill="#3557ff" opacity="0.9"/>
+<polygon points="349,250 349,238 355,235 355,247" fill="#7c5cfc" opacity="0.9"/>
+<polygon points="360,254 360,247 366,244 366,251" fill="#4a6cf7" opacity="0.9"/>
+<!-- Screen shine edge -->
+<polyline points="298,244 340,220 382,244" fill="none" stroke="rgba(100,150,255,0.4)" stroke-width="0.8"/>
+<!-- Keyboard base -->
+<polygon points="280,266 340,234 400,266 340,298" fill="#0d1848" opacity="0.8"/>
+<polygon points="280,266 280,280 340,312 340,298" fill="#080f30"/>
+<polygon points="400,266 400,280 340,312 340,298" fill="#060c28"/>
+<polyline points="280,266 340,234 400,266" fill="none" stroke="rgba(60,90,200,0.3)" stroke-width="0.8"/>
+<!-- Key rows illusion -->
+<line x1="295" y1="274" x2="340" y2="250" stroke="rgba(80,120,255,0.2)" stroke-width="1"/>
+<line x1="295" y1="282" x2="340" y2="258" stroke="rgba(80,120,255,0.2)" stroke-width="1"/>
+</g>
+
+<!-- ─── DATA BEAMS connecting elements ─── -->
+<!-- Server to cloud -->
+<line class="iso-beam-line" x1="295" y1="92" x2="335" y2="110" stroke="#7c5cfc" stroke-width="1.2" opacity="0.6"/>
+<!-- Platform to AI node -->
+<line class="iso-beam-line" x1="140" y1="175" x2="148" y2="165" stroke="#4a6cf7" stroke-width="1" opacity="0.5" style="animation-delay:.4s"/>
+<!-- Platform to laptop -->
+<line class="iso-beam-line" x1="310" y1="205" x2="318" y2="230" stroke="#3557ff" stroke-width="1" opacity="0.5" style="animation-delay:.8s"/>
+<!-- Cloud to laptop -->
+<line class="iso-beam-line" x1="370" y1="140" x2="370" y2="212" stroke="#7c5cfc" stroke-width="1" opacity="0.45" style="animation-delay:.2s"/>
+
+<!-- ─── FLOATING DATA PARTICLES ─── -->
+<circle cx="250" cy="130" r="2" fill="#4a6cf7" class="iso-pulse-dot" style="animation-delay:.2s"/>
+<circle cx="310" cy="155" r="1.5" fill="#7c5cfc" class="iso-pulse-dot" style="animation-delay:.7s"/>
+<circle cx="180" cy="155" r="1.5" fill="#00ff88" class="iso-blink" style="animation-delay:1s"/>
+<circle cx="340" cy="185" r="2" fill="#4a6cf7" class="iso-pulse-dot" style="animation-delay:.4s"/>
+<circle cx="270" cy="210" r="1.5" fill="#7c5cfc" class="iso-pulse-dot" style="animation-delay:1.2s"/>
+
+<!-- ─── LABELS ─── -->
+<text x="218" y="24" fill="rgba(100,140,255,0.7)" font-size="10" font-family="sans-serif" font-weight="600" letter-spacing="1" text-anchor="middle">SERVER</text>
+
+</svg>
         </div>
       </div>
     </div>
@@ -246,7 +411,7 @@
       <div class="rv-r">
         <div class="badge"><span class="badge-dot"></span>Our Story</div>
         <h2 class="title">Technology That <span class="gr">Thinks Ahead</span></h2>
-        <p class="lead" style="margin-top:16px">Founded in 2013 in Pune, Teivora was built on a simple principle: technology should create genuine business value — not complexity. Powered by 3rd Eye Imagination, we see beyond the obvious to deliver solutions that outperform expectations every time.</p>
+        <p class="lead" style="margin-top:16px">Founded in 2021 in Nashik, Teivora was built on a simple principle: technology should create genuine business value — not complexity. Powered by 3rd Eye Imagination, we see beyond the obvious to deliver solutions that outperform expectations every time.</p>
         <div class="about-feats">
           <div class="about-feat"><div class="feat-dot">🎯</div><div><h4>Mission-Driven</h4><p>We solve problems, not sell technology. Every engagement starts with deep understanding of your goals.</p></div></div>
           <div class="about-feat"><div class="feat-dot">⚡</div><div><h4>Agile Delivery</h4><p>Iterative sprints, daily standups, and milestone reviews keep you in control at every stage.</p></div></div>
@@ -286,40 +451,116 @@
       <div class="testi-track">
         <div class="testi-card">
           <div class="stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
-          <p class="testi-text">"Teivora transformed our data infrastructure completely. Their AI models cut processing time by 70% and the team was genuinely invested in our outcome — not just the deliverable."</p>
-          <div class="testi-author"><div class="testi-av">RK</div><div><div class="testi-name">Rajesh Kumar</div><div class="testi-role">CTO, NovaSphere Inc</div></div></div>
+          <p class="testi-text">"
+
+“Teivora Technology’s CRM solution has brought a structured and systematic approach to our real estate operations. The platform effectively manages the entire sales lifecycle—from lead generation to customer conversion—ensuring improved coordination and transparency across teams.
+
+Its ability to streamline follow-ups, track site visits, and maintain centralized customer data has significantly enhanced our operational efficiency. The insights provided through its reporting tools support better decision-making and performance monitoring.
+
+The system is well-aligned with the practical needs of the builder and land development sector, making it a valuable asset for organizations aiming to improve productivity and customer engagement.
+
+Teivora Technology stands out as a dependable and professional CRM partner for real estate developers focused on scalable and efficient growth.”"</p>
+          <div class="testi-author">
+            <img src="images/umesh.jpeg" class="testi-img">
+            <div>
+              <div class="testi-name">Umesh Wankhede</div>
+              <div class="testi-role">Director – Vaishnavi Developers, Wankhede Realty & Zenith Realty
+Immediate Past President (IPP), CREDAI Nashik Metro</div>
+            </div>
+          </div>
         </div>
+
         <div class="testi-card">
           <div class="stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
-          <p class="testi-text">"Zero downtime, 40% cost reduction, rock-solid architecture. The cloud migration was the smoothest IT project I've ever been part of. Teivora sets the standard."</p>
-          <div class="testi-author"><div class="testi-av">SM</div><div><div class="testi-name">Sarah Mitchell</div><div class="testi-role">Head of Engineering, Apex Digital</div></div></div>
+          <p class="testi-text">"Collaborating with Taron Technology has been a highly valuable experience for my work in ZED and ISO certification consulting for manufacturing industries. In today’s competitive environment, digital presence and structured communication play a crucial role — and Taron Technology helped bridge that gap effectively.
+
+They developed a strong digital portfolio and solution framework that complements my certification services. From presenting technical expertise in a clear format to integrating digital tools that improve client engagement, their work has added significant value to my professional offerings.
+
+What stands out about Taron Technology is their ability to understand both industrial requirements and modern digital trends. Their approach is practical, result-oriented, and tailored to real business needs.
+
+I strongly recommend Taron Technology to professionals and organizations looking to enhance their digital presence while aligning with industry standards and certifications."</p>
+          <div class="testi-author">
+            <img src="images/saurabh.jpeg" class="testi-img">
+            <div>
+              <div class="testi-name">Saurabh Aher</div>
+              <div class="testi-role">Client</div>
+            </div>
+          </div>
         </div>
+
         <div class="testi-card">
           <div class="stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
-          <p class="testi-text">"Our FinTech app launched on time, on budget, and users love it. 2M downloads in 6 months. Teivora's design and engineering quality is genuinely exceptional."</p>
-          <div class="testi-author"><div class="testi-av">AP</div><div><div class="testi-name">Anika Patel</div><div class="testi-role">Product Director, Meridian Group</div></div></div>
+          <p class="testi-text">"Working with Teivora Technology was an excellent experience. The team demonstrated strong expertise in AI-driven web development, CRM solutions, and machine learning projects. Their ability to understand business requirements and transform them into practical, scalable solutions is truly impressive.
+
+The AI and ML systems developed significantly improved our workflow efficiency and decision-making process. The CRM solution was well-structured, user-friendly, and tailored perfectly to our needs.
+
+Teivora Technology is highly professional, responsive, and committed to delivering quality work on time. I would highly recommend them to anyone looking for advanced technology solutions, especially in AI, web development, and automation.
+
+— Geeta Fermah, United Kingdom"</p>
+          <div class="testi-author">
+            <img src="images/geeta.jpeg" class="testi-img">
+            <div>
+              <div class="testi-name">Geeta Fermah</div>
+              <div class="testi-role">Surprise Me UK</div>
+            </div>
+          </div>
         </div>
+
         <div class="testi-card">
           <div class="stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
-          <p class="testi-text">"28 critical vulnerabilities found and fixed in 3 weeks. Teivora's security team is thorough, fast, and explains every finding in plain English. A rare combination."</p>
-          <div class="testi-author"><div class="testi-av">JL</div><div><div class="testi-name">James Liu</div><div class="testi-role">CISO, Quantum Labs</div></div></div>
+          <p class="testi-text">"Working with Teivora Technology has been a wonderful experience. Their expertise in developing smart and efficient digital solutions for the education sector is truly commendable.
+
+They understood our teaching requirements across India and delivered a highly effective platform that made learning more structured, interactive, and accessible. The system has greatly improved our ability to manage students, track progress, and deliver quality education at scale.
+
+Teivora Technology is professional, responsive, and dedicated to delivering solutions that truly make an impact. I would highly recommend them to anyone in the education field looking for advanced and reliable technology solutions.
+
+— Reema Hiwarale, India"</p>
+          <div class="testi-author">
+            <img src="images/reema.jpeg" class="testi-img">
+            <div>
+              <div class="testi-name">Reema Hiwrale</div>
+              <div class="testi-role">Professional Teacher</div>
+            </div>
+          </div>
         </div>
+
+        
+
         <div class="testi-card">
           <div class="stars"><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span></div>
-          <p class="testi-text">"The real-time BI dashboard they built was a game changer. We grew revenue by 35% in Q1 simply because we could finally make data-driven decisions with confidence."</p>
-          <div class="testi-author"><div class="testi-av">FL</div><div><div class="testi-name">Fatima Lobo</div><div class="testi-role">CEO, CoreBridge Tech</div></div></div>
+          <p class="testi-text">"Working with Teivora Technology has been a game-changer for my professional growth. As a Sales Executive at Sahyadri Farms, I wanted a strong digital presence that could represent my skills and experience effectively — and their team delivered exactly that.
+
+They didn’t just create a portfolio; they built a complete digital identity for me. From understanding my background to structuring the portfolio strategically, everything was handled with precision and creativity. The use of modern tools, clean design, and smart presentation has significantly improved how I showcase myself to clients and professionals.
+
+What impressed me the most was their approach — combining technology with practical business thinking. The portfolio they created is not only visually appealing but also highly functional and impactful.
+
+I highly recommend Taron Technology to anyone looking to build a strong digital presence and stand out professionally."</p>
+          <div class="testi-author">
+            <img src="images/mayur.jpeg" class="testi-img">
+            <div>
+              <div class="testi-name">Mayur Ahire</div>
+              <div class="testi-role">Client</div>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
+
     <div class="carousel-nav">
       <button class="c-btn c-prev">←</button>
-      <div class="c-dots"><div class="c-dot on"></div><div class="c-dot"></div><div class="c-dot"></div><div class="c-dot"></div></div>
+      <div class="c-dots">
+        <div class="c-dot on"></div>
+        <div class="c-dot"></div>
+        <div class="c-dot"></div>
+        <div class="c-dot"></div>
+      </div>
       <button class="c-btn c-next">→</button>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
+<!-- PORTFOLIO 
 <section class="section" id="portfolio">
   <div class="wrap">
     <div class="tc rv">
@@ -337,7 +578,7 @@
     <div class="tc" style="margin-top:40px"><a href="pages/portfolio.html" class="btn btn-primary">View All Projects →</a></div>
   </div>
 </section>
-
+-->
 <!-- FAQ -->
 <section class="section" style="background:var(--c-bg2)">
   <div class="wrap">
@@ -407,7 +648,7 @@
           <a href="pages/about.html">About Us</a>
           <a href="pages/team.html">Our Team</a>
           <a href="pages/portfolio.html">Portfolio</a>
-          <a href="pages/blog.html">Blog</a>
+          
           <a href="pages/pricing.html">Pricing</a>
           <a href="pages/contact.html">Contact</a>
         </div>
